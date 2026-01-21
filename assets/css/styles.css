@@ -27,13 +27,13 @@ main {
 }
 
 .top {
-  font-size: clamp(10px, 2vw, 12px);
+  font-size: clamp(10px, 2vw, 14px);
   background-color: var(--primary);
   color: var(--text-color);
-  padding: 7px 15px;
+  padding: 9px 15px;
   text-align: center;
   font-family: "Segoe UI";
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -59,7 +59,7 @@ main {
 }
 
 .logo {
-  font-size: clamp(14px, 4vw, 17px);
+  font-size: clamp(14px, 4vw, 25px);
   font-weight: 700;
 }
 
@@ -67,10 +67,23 @@ main {
 .left ul li,
 .right ul li {
   margin-left: 10px;
-  font-size: clamp(10px, 3vw, 14px);
+  font-size: clamp(10px, 3vw, 17px);
   cursor: pointer;
+  transition: 0.4s ease-in;
+}
+.left ul a,
+.left ul li a,
+.right ul li i {
+  color: var(--primary);
+  transition: 0.3s ease-in;
 }
 
+.left ul a:hover,
+.left ul li a:hover,
+.right ul li i:hover {
+  background-color: #fff;
+  color: var(--hover);
+}
 .left a {
   color: var(--text-color-second);
 }
@@ -78,9 +91,9 @@ main {
 /* * right */
 
 .right select {
-  font-size: 11px;
+  font-size: 15px;
   outline: none;
-  width: 45px;
+  width: 55px;
   height: 20px;
   border: none;
   cursor: pointer;
@@ -90,12 +103,13 @@ main {
   padding: 0 20px;
   font-size: 20px;
   display: none;
+  cursor: pointer;
 }
 
 /* *Hero section */
 .hero {
   background-color: rgba(0, 0, 0, 0.8);
-  height: 400px;
+  height: 620px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +122,7 @@ main {
 }
 .hero-content span {
   color: var(--text-color);
-  font-size: clamp(11px, 3vw, 13px);
+  font-size: clamp(11px, 3vw, 14px);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -179,6 +193,11 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: 0.4s ease-in;
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 .card img {
@@ -194,8 +213,8 @@ main {
 }
 
 .product-details h3 {
-  font-size: clamp(20px, 4vw, 25px);
-  font-weight: 400;
+  font-size: clamp(15px, 4vw, 19px);
+  font-weight: 100;
   margin-bottom: 4px;
 }
 
@@ -225,7 +244,9 @@ footer {
   font-size: clamp(10px, 2vw, 15px);
   letter-spacing: 2px;
 }
-
+footer a {
+  color: white;
+}
 /* * query media */
 
 /* * navbar */
@@ -280,5 +301,9 @@ footer {
   .product-list img {
     width: 200px;
     height: 240px;
+  }
+  .btn {
+    padding: 9x 10px;
+    font-size: 12px;
   }
 }
